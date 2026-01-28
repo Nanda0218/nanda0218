@@ -1,24 +1,9 @@
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
-const toast = document.getElementById("toast");
-const contactForm = document.getElementById("contactForm");
-
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
-function addToCart(product) {
-    showToast(product + " ditambahkan");
+function addCart(product) {
+    alert(product + " berhasil ditambahkan!");
 }
 
-contactForm.addEventListener("submit", e => {
+document.getElementById("contactForm").addEventListener("submit", function(e){
     e.preventDefault();
-    showToast("Pesan berhasil dikirim");
-    contactForm.reset();
+    alert("Pesan berhasil dikirim!");
+    this.reset();
 });
-
-function showToast(msg) {
-    toast.textContent = msg;
-    toast.style.display = "block";
-    setTimeout(() => toast.style.display = "none", 3000);
-}
