@@ -6,103 +6,57 @@
 }
 
 body {
-    line-height: 1.6;
+    background: #f5f7f6;
+    color: #333;
 }
 
 header {
     background: #2e7d32;
-    padding: 15px 0;
-}
-
-.nav {
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav h1 {
     color: white;
 }
 
-.nav span {
-    color: #c8e6c9;
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-}
-
-.nav ul li {
+header nav a {
+    color: white;
     margin-left: 15px;
-}
-
-.nav ul li a {
-    color: white;
     text-decoration: none;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
+    font-weight: bold;
 }
 
 .hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-    url("../img/hero-pertanian.jpg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+                url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+    background-size: cover;
+    padding: 80px 20px;
     color: white;
     text-align: center;
 }
 
-.btn {
-    display: inline-block;
+.hero .btn {
     background: #4caf50;
-    color: white;
     padding: 10px 20px;
+    color: white;
     text-decoration: none;
-    margin-top: 15px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
-.section {
-    padding: 60px 0;
+section {
+    padding: 50px 20px;
     text-align: center;
-}
-
-.bg {
-    background: #f1f8e9;
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
 }
 
 .card {
     background: white;
     padding: 20px;
-    border-radius: 6px;
-}
-
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.card button {
-    width: 100%;
-    padding: 8px;
-    margin-top: 10px;
-    background: #2e7d32;
-    color: white;
-    border: none;
-    cursor: pointer;
+    margin: 15px auto;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
 
 form {
@@ -113,20 +67,20 @@ form {
 form input, form textarea {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 8px 0;
 }
 
 form button {
-    width: 100%;
-    padding: 10px;
     background: #2e7d32;
     color: white;
+    padding: 10px;
     border: none;
+    width: 100%;
 }
 
 footer {
-    background: #1b5e20;
+    background: #2e7d32;
     color: white;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
 }
