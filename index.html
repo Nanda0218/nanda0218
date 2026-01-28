@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Nusantara - Pertanian Modern</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="header">
+    <div class="container nav">
+        <div class="logo">Agro <span>Nusantara</span></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#products">Produk</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+</header>
+
+<section id="home" class="hero">
+    <div class="container">
+        <h1>Pertanian Berkelanjutan<br>Untuk Indonesia</h1>
+        <p>Mendukung petani dengan teknologi & produk pertanian berkualitas.</p>
+        <a href="#products" class="btn">Lihat Produk</a>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="container grid">
+        <div>
+            <h2>Tentang Kami</h2>
+            <p>
+                Agro Nusantara adalah platform pertanian modern yang menyediakan
+                benih unggul, pupuk organik, dan solusi pertanian berkelanjutan.
+            </p>
+            <ul class="features">
+                <li><i class="fas fa-seedling"></i> Ramah Lingkungan</li>
+                <li><i class="fas fa-tractor"></i> Teknologi Modern</li>
+                <li><i class="fas fa-users"></i> Dukung Petani Lokal</li>
+            </ul>
+        </div>
+        <img src="img/pertanian.jpg" alt="Pertanian">
+    </div>
+</section>
+
+<section id="products" class="section gray">
+    <div class="container">
+        <h2 class="center">Produk Unggulan</h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="img/benih-padi.jpg">
+                <h3>Benih Padi Unggul</h3>
+                <p>Tahan hama dan hasil panen tinggi</p>
+                <button onclick="addToCart('Benih Padi Unggul')">Tambah</button>
+            </div>
+
+            <div class="card">
+                <img src="img/pupuk-organik.jpg">
+                <h3>Pupuk Organik</h3>
+                <p>Menyuburkan tanah secara alami</p>
+                <button onclick="addToCart('Pupuk Organik')">Tambah</button>
+            </div>
+
+            <div class="card">
+                <img src="img/pestisida-nabati.jpg">
+                <h3>Pestisida Nabati</h3>
+                <p>Aman & ramah lingkungan</p>
+                <button onclick="addToCart('Pestisida Nabati')">Tambah</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section dark">
+    <div class="container">
+        <h2>Hubungi Kami</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Nama" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Pesan" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Agro Nusantara</p>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
