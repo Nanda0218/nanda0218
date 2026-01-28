@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Admin UMKM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background:#f5f5f5;display:flex;justify-content:center;align-items:center;height:100vh">
+
+<div style="background:white;padding:40px;border-radius:15px;width:350px">
+    <h2 style="text-align:center">Login Admin</h2>
+
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Email Admin" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button class="btn btn-primary" style="width:100%">Login</button>
+    </form>
+
+    <p id="error" style="color:red;text-align:center;margin-top:10px"></p>
+</div>
+
+<!-- Firebase -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: "ISI_API_KEY",
+    authDomain: "ISI_DOMAIN",
+    projectId: "ISI_PROJECT_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+document.getElementById('loginForm').addEventListener('submit', async (e)=>{
+    e.preventDefault();
+
+    try{
+        await signInWithEmailAndPassword(
+            auth,
+            email.value,
+            password.value
+        );
+        window.location.href = "admin.html";
+    }catch(err){
+        document.getElementById('error').textContent = "Login gagal!";
+    }
+});
+</script>
+
+</body>
+</html>

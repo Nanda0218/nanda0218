@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Data Pesanan</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="container" style="padding-top:50px">
+<h2>Pesanan Masuk</h2>
+<div id="orders"></div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, getDocs } from
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "ISI_API_KEY",
+  authDomain: "ISI_DOMAIN",
+  projectId: "ISI_PROJECT_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const wrap = document.getElementById("orders");
+const snap = await getDocs(collection(db,"orders"));
+
+snap.forEach(o=>{
+    const d=o.data();
+    wrap.innerHTML+=`
+    <div style="background:#fff;padding:20px;margin-bottom:10px">
+        <b>${d.nama}</b><br>
+        ${d.alamat}<br>
+        Total: Rp ${d.total}<br>
+        Status: ${d.status}
+    </div>`;
+});
+</script>
+</body>
+</html>
+<select onchange="updateStatus('${o.id}', this.value)">
+    <option ${d.status=='baru'?'selected':''}>baru</option>
+    <option ${d.status=='diproses'?'selected':''}>diproses</option>
+    <option ${d.status=='dikirim'?'selected':''}>dikirim</option>
+    <option ${d.status=='selesai'?'selected':''}>selesai</option>
+</select>

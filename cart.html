@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Keranjang</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="container" style="padding-top:50px">
+<h2>Keranjang Belanja</h2>
+
+<div id="cartList"></div>
+
+<h3>Total: Rp <span id="total">0</span></h3>
+
+<form id="orderForm">
+    <input type="text" id="nama" placeholder="Nama Pemesan" required>
+    <input type="text" id="alamat" placeholder="Alamat" required>
+    <button class="btn btn-primary">Pesan Sekarang</button>
+</form>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, addDoc } from
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "ISI_API_KEY",
+  authDomain: "ISI_DOMAIN",
+  projectId: "ISI_PROJECT_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const list = document.getElementById("cartList");
+const totalEl = document.getElementById("total");
+
+let total = 0;
+cart.forEach(i=>{
+    total += i.price;
+    list.innerHTML += `<p>${i.name} - Rp ${i.price}</p>`;
+});
+totalEl.textContent = total;
+
+document.getElementById("orderForm").addEventListener("submit", async e=>{
+    e.preventDefault();
+
+    await addDoc(collection(db,"orders"),{
+        nama:nama.value,
+        alamat:alamat.value,
+        items:cart,
+        total,
+        status:"baru",
+        createdAt:new Date()
+    });
+
+    localStorage.removeItem("cart");
+    alert("Pesanan berhasil!");
+    window.location.href="index.html";
+});
+</script>
+
+</body>
+</html>

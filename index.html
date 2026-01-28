@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UMKM Kebumen</title>
+    <title>UMKM Pertanian Nusantara</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header id="header">
     <div class="container">
         <nav>
-            <div class="logo">UMKM <span>Kebumen</span></div>
+            <div class="logo">UMKM <span>Pertanian</span></div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link">Beranda</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">Tentang</a></li>
                 <li><a href="#products" class="nav-link">Produk</a></li>
                 <li><a href="#contact" class="nav-link">Kontak</a></li>
@@ -31,10 +32,12 @@
     </div>
 </header>
 
+<main>
+
 <section id="home">
     <div class="container hero-content">
-        <h1>Produk Lokal<br>Khas Kebumen</h1>
-        <p>Mendukung UMKM Kebumen melalui digitalisasi dan pemasaran online.</p>
+        <h1>Hasil Tani Lokal<br>Berkualitas Nusantara</h1>
+        <p>Mendukung UMKM dan petani lokal dengan produk segar dan alami.</p>
         <div class="hero-btn-wrapper">
             <a href="#products" class="btn btn-primary">Lihat Produk</a>
             <a href="#contact" class="btn btn-outline">Hubungi Kami</a>
@@ -46,53 +49,138 @@
     <div class="container about-grid">
         <div class="about-text">
             <div class="section-title">Tentang Kami</div>
-            <h3>UMKM Kebumen</h3>
-            <p>Website UMKM Kebumen dibuat untuk membantu pelaku usaha kecil dan menengah memasarkan produknya secara digital.</p>
+            <h3>UMKM Pertanian Berbasis Desa</h3>
+            <p>Kami adalah wadah UMKM pertanian yang menghimpun hasil tani lokal dari petani desa.</p>
+            <p>Produk dipanen langsung dari kebun dan dipasarkan secara adil.</p>
 
             <div class="features">
-                <div class="feature-item"><i class="fas fa-leaf"></i><span>Produk Lokal</span></div>
-                <div class="feature-item"><i class="fas fa-users"></i><span>UMKM Mandiri</span></div>
-                <div class="feature-item"><i class="fas fa-globe"></i><span>Digital</span></div>
+                <div class="feature-item"><i class="fas fa-leaf"></i> Organik</div>
+                <div class="feature-item"><i class="fas fa-seedling"></i> Lokal</div>
+                <div class="feature-item"><i class="fas fa-hand-holding-heart"></i> Berkelanjutan</div>
             </div>
         </div>
 
         <div class="about-img">
-            <img src="img/umkm.jpg" alt="UMKM Kebumen">
+            <img src="img/pertanian.jpg" alt="Pertanian">
         </div>
     </div>
 </section>
 
 <section id="products" class="section-padding">
     <div class="container">
-        <div class="text-center">
-            <h2 class="section-title">Produk Unggulan</h2>
-            <p class="section-subtitle">Hasil terbaik UMKM Kebumen</p>
-        </div>
+        <h2 class="section-title text-center">Produk Unggulan</h2>
 
         <div class="product-grid">
 
             <div class="product-card">
-                <img src="img/keripik pangsit.jpg">
-                <h3>Keripik Pangsit</h3>
-                <p>Camilan gurih khas Kebumen</p>
-                <span class="price">Rp 15.000</span>
-                <button onclick="addToCart('Keripik Pangsit')"><i class="fas fa-plus"></i></button>
+                <div class="product-image">
+                    <span class="badge">Best Seller</span>
+                    <img src="img/beras.jpg">
+                </div>
+                <div class="product-info">
+                    <h3>Beras Organik</h3>
+                    <p>Beras sehat tanpa bahan kimia.</p>
+                    <div class="product-footer">
+                        <span class="price">Rp 15.000/kg</span>
+                       <button class="add-cart-btn"
+                    onclick="addToCart('Beras Organik',15000,'img/beras.jpg')">
+                    <i class="fas fa-plus"></i>
+                     </button>
+                    </div>
+                </div>
             </div>
 
             <div class="product-card">
-                <img src="img/Batik Kebumen.jpg">
-                <h3>Batik Kebumen</h3>
-                <p>Motif budaya lokal</p>
-                <span class="price">Rp 250.000</span>
-                <button onclick="addToCart('Batik Kebumen')"><i class="fas fa-plus"></i></button>
+                <div class="product-image">
+                    <img src="img/sayur.jpg">
+                </div>
+                <div class="product-info">
+                    <h3>Sayuran Segar</h3>
+                    <p>Langsung dari kebun.</p>
+                    <div class="product-footer">
+                        <span class="price">Rp 10.000</span>
+                        <button onclick="addToCart('Sayuran Segar')" class="add-cart-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div class="product-card">
-                <img src="img/Gula Kelapa.jpg">
-                <h3>Gula Kelapa</h3>
-                <p>Alami dan sehat</p>
-                <span class="price">Rp 20.000</span>
-                <button onclick="addToCart('Gula Kelapa')"><i class="fas fa-plus"></i></button>
+                <div class="product-image">
+                    <span class="badge">New</span>
+                    <img src="img/jagung.jpg">
+                </div>
+                <div class="product-info">
+                    <h3>Jagung Manis</h3>
+                    <p>Manis alami & segar.</p>
+                    <div class="product-footer">
+                        <span class="price">Rp 8.000</span>
+                        <button onclick="addToCart('Jagung Manis')" class="add-cart-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="products" class="section-padding">
+    <div class="container">
+        <h2 class="section-title text-center">Produk Unggulan</h2>
+
+        <div class="product-grid">
+
+            <!-- Cabai Merah -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/cabai.jpg" alt="Cabai Merah">
+                </div>
+                <div class="product-info">
+                    <h3>Cabai Merah</h3>
+                    <p>Pedas segar, cocok untuk masakan sehari-hari.</p>
+                    <div class="product-footer">
+                        <span class="price">Rp 20.000/kg</span>
+                        <button onclick="addToCart('Cabai Merah',20000,'img/cabai.jpg')" class="add-cart-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pupuk Organik -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/pupuk.jpg" alt="Pupuk Organik">
+                </div>
+                <div class="product-info">
+                    <h3>Pupuk Organik</h3>
+                    <p>Pupuk ramah lingkungan, meningkatkan kesuburan tanah.</p>
+                    <div class="product-footer">
+                        <span class="price">Rp 50.000/25kg</span>
+                        <button onclick="addToCart('Pupuk Organik',50000,'img/pupuk.jpg')" class="add-cart-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bawang Merah -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/bawang.jpg" alt="Bawang Merah">
+                </div>
+                <div class="product-info">
+                    <h3>Bawang Merah</h3>
+                    <p>Bawang merah segar dari kebun lokal.</p>
+                    <div class="product-footer">
+                        <span class="price">Rp 30.000/kg</span>
+                        <button onclick="addToCart('Bawang Merah',30000,'img/bawang.jpg')" class="add-cart-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -104,25 +192,38 @@
         <div class="contact-info">
             <h3>Kontak</h3>
             <p><i class="fas fa-map-marker-alt"></i> Kebumen, Jawa Tengah</p>
-            <p><i class="fas fa-phone"></i> 0812 3456 7890</p>
-            <p><i class="fas fa-envelope"></i> umkmkebumen@gmail.com</p>
+            <p><i class="fas fa-phone"></i> 0812-0000-0000</p>
+            <p><i class="fas fa-envelope"></i> umkmpertanian@gmail.com</p>
         </div>
 
-        <form id="contactForm">
-            <input type="text" placeholder="Nama Lengkap" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Pesan" required></textarea>
-            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-        </form>
+        <div class="contact-form-wrapper">
+            <h3>Kirim Pesan</h3>
+            <form id="contactForm">
+                <input type="text" placeholder="Nama" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Pesan" required></textarea>
+                <button class="btn btn-primary">Kirim</button>
+            </form>
+        </div>
     </div>
 </section>
 
+</main>
+
 <footer>
-    <p>© 2025 UMKM Kebumen. All Rights Reserved.</p>
+    <div class="container">
+        <div class="footer-logo">UMKM <span>Pertanian</span></div>
+        <p>&copy; 2026 UMKM Pertanian</p>
+    </div>
 </footer>
 
-<div id="toast" class="toast">Berhasil</div>
+<div id="toast" class="toast">
+    <i class="fas fa-check-circle"></i>
+    <span class="toast-message"></span>
+</div>
 
 <script src="script.js"></script>
 </body>
 </html>
+<button onclick="logout()" class="btn btn-outline">Logout</button>
+<script type="module" src="cart.js"></script>
