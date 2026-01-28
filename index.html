@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agro Nusantara - Pertanian Modern</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMKM Kebumen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header id="header">
     <div class="container">
         <nav>
-            <div class="logo">Agro <span>Nusantara</span></div>
+            <div class="logo">UMKM <span>Kebumen</span></div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link">Beranda</a></li>
-                <li><a href="#products" class="nav-link">Hasil Tani</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#products" class="nav-link">Produk</a></li>
                 <li><a href="#contact" class="nav-link">Kontak</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -28,11 +31,10 @@
     </div>
 </header>
 
-<main>
 <section id="home">
     <div class="container hero-content">
-        <h1>Pertanian Modern<br>Untuk Negeri</h1>
-        <p>Menyediakan hasil pertanian berkualitas tinggi langsung dari petani lokal.</p>
+        <h1>Produk Lokal<br>Khas Kebumen</h1>
+        <p>Mendukung UMKM Kebumen melalui digitalisasi dan pemasaran online.</p>
         <div class="hero-btn-wrapper">
             <a href="#products" class="btn btn-primary">Lihat Produk</a>
             <a href="#contact" class="btn btn-outline">Hubungi Kami</a>
@@ -40,118 +42,86 @@
     </div>
 </section>
 
+<section id="about" class="section-padding">
+    <div class="container about-grid">
+        <div class="about-text">
+            <div class="section-title">Tentang Kami</div>
+            <h3>UMKM Kebumen</h3>
+            <p>Website UMKM Kebumen dibuat untuk membantu pelaku usaha kecil dan menengah memasarkan produknya secara digital.</p>
+
+            <div class="features">
+                <div class="feature-item"><i class="fas fa-leaf"></i><span>Produk Lokal</span></div>
+                <div class="feature-item"><i class="fas fa-users"></i><span>UMKM Mandiri</span></div>
+                <div class="feature-item"><i class="fas fa-globe"></i><span>Digital</span></div>
+            </div>
+        </div>
+
+        <div class="about-img">
+            <img src="img/umkm.jpg" alt="UMKM Kebumen">
+        </div>
+    </div>
+</section>
+
 <section id="products" class="section-padding">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-title">Hasil Pertanian</h2>
-            <p class="section-subtitle">Produk segar langsung dari lahan petani</p>
+            <h2 class="section-title">Produk Unggulan</h2>
+            <p class="section-subtitle">Hasil terbaik UMKM Kebumen</p>
         </div>
 
-        <div class="product-grid" id="productGrid">
-            <div class="product-card">
-                <div class="product-image"><img src="img/beras.jpg" alt="Beras"></div>
-                <div class="product-info">
-                    <h3 class="product-title">Beras Organik</h3>
-                    <p class="product-desc">Beras organik pilihan kualitas premium.</p>
-                    <div class="product-footer">
-                        <span class="price">Rp 12.000/kg</span>
-                        <button onclick="showToast('Beras Organik ditambahkan!')">Tambah</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image"><img src="img/jagung.jpg" alt="Jagung"></div>
-                <div class="product-info">
-                    <h3 class="product-title">Jagung Manis</h3>
-                    <p class="product-desc">Jagung segar, manis dan renyah.</p>
-                    <div class="product-footer">
-                        <span class="price">Rp 10.000/kg</span>
-                        <button onclick="showToast('Jagung Manis ditambahkan!')">Tambah</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image"><img src="img/cabai.jpg" alt="Cabai"></div>
-                <div class="product-info">
-                    <h3 class="product-title">Cabai Merah</h3>
-                    <p class="product-desc">Cabai segar, pedas alami.</p>
-                    <div class="product-footer">
-                        <span class="price">Rp 20.000/kg</span>
-                        <button onclick="showToast('Cabai Merah ditambahkan!')">Tambah</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image"><img src="img/sayur.jpg" alt="Sayur"></div>
-                <div class="product-info">
-                    <h3 class="product-title">Sayuran Segar</h3>
-                    <p class="product-desc">Campuran sayuran sehat dari petani lokal.</p>
-                    <div class="product-footer">
-                        <span class="price">Rp 15.000/kg</span>
-                        <button onclick="showToast('Sayuran Segar ditambahkan!')">Tambah</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="product-grid">
 
-        <div class="text-center" style="margin-top: 30px;">
-            <button class="btn btn-outline" onclick="showAddProductForm()">Tambah Produk Baru</button>
+            <div class="product-card">
+                <img src="img/keripik pangsit.jpg">
+                <h3>Keripik Pangsit</h3>
+                <p>Camilan gurih khas Kebumen</p>
+                <span class="price">Rp 15.000</span>
+                <button onclick="addToCart('Keripik Pangsit')"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="product-card">
+                <img src="img/Batik Kebumen.jpg">
+                <h3>Batik Kebumen</h3>
+                <p>Motif budaya lokal</p>
+                <span class="price">Rp 250.000</span>
+                <button onclick="addToCart('Batik Kebumen')"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="product-card">
+                <img src="img/Gula Kelapa.jpg">
+                <h3>Gula Kelapa</h3>
+                <p>Alami dan sehat</p>
+                <span class="price">Rp 20.000</span>
+                <button onclick="addToCart('Gula Kelapa')"><i class="fas fa-plus"></i></button>
+            </div>
+
         </div>
     </div>
 </section>
-
-<div id="addProductModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeAddProductForm()">&times;</span>
-        <h3>Tambah Produk</h3>
-        <input type="text" id="prodName" placeholder="Nama Produk">
-        <input type="text" id="prodPrice" placeholder="Harga (Rp/kg)">
-        <input type="text" id="prodImg" placeholder="URL Gambar">
-        <textarea id="prodDesc" placeholder="Deskripsi"></textarea>
-        <button class="btn btn-primary" onclick="addProduct()">Simpan</button>
-    </div>
-</div>
 
 <section id="contact" class="section-padding">
-    <div class="container">
-        <div class="text-center" style="margin-bottom:50px;">
-            <h2 class="section-title">Kontak Kami</h2>
-            <p class="section-subtitle">Kerja sama, distribusi, atau pertanyaan</p>
+    <div class="container contact-container">
+        <div class="contact-info">
+            <h3>Kontak</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Kebumen, Jawa Tengah</p>
+            <p><i class="fas fa-phone"></i> 0812 3456 7890</p>
+            <p><i class="fas fa-envelope"></i> umkmkebumen@gmail.com</p>
         </div>
 
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Informasi</h3>
-                <p>Agro Nusantara<br>Kebumen, Jawa Tengah</p>
-                <p>📞 08xxxxxxxxxx</p>
-                <p>✉️ agronusantara@gmail.com</p>
-            </div>
-
-            <div class="contact-form-wrapper">
-                <h3>Kirim Pesan</h3>
-                <form id="contactForm">
-                    <input type="text" placeholder="Nama Lengkap" required>
-                    <input type="email" placeholder="Alamat Email" required>
-                    <input type="text" placeholder="Subjek">
-                    <textarea rows="5" placeholder="Pesan Anda..." required></textarea>
-                    <button type="submit" class="btn btn-primary" style="width:100%;">Kirim</button>
-                </form>
-            </div>
-        </div>
+        <form id="contactForm">
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Pesan" required></textarea>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+        </form>
     </div>
 </section>
 
-</main>
-
 <footer>
-    <div class="container">
-        <p>© 2026 Agro Nusantara - Sistem Informasi Pertanian</p>
-    </div>
+    <p>© 2025 UMKM Kebumen. All Rights Reserved.</p>
 </footer>
 
-<div id="toast" class="toast">
-    <div class="toast-message"></div>
-</div>
+<div id="toast" class="toast">Berhasil</div>
 
 <script src="script.js"></script>
 </body>
