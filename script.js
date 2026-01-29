@@ -28,4 +28,3 @@ window.updateStatus = async (id,status)=>{
     await updateDoc(doc(db,"orders",id),{status});
     alert("Status diperbarui");
 };
-
